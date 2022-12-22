@@ -1,15 +1,21 @@
-input("\033[1;33m\n" + "\033[1m" + "A code from which you are the hero." + "\033[0m")
+input("\033[1;36m\n" + "Press the enter button to scroll the text.")
 print(" ")
 
-input("This is an experimental project I made during my free time. Might finish it someday, might not... Who knows. For now at least I do hope you'll enjoy the adventure.")
-
-input("\033[1;36m\n" + "WARNING !!")
-input("Please be aware that only pressing the enter button instead of pressing the recquired ones might result in a crash.")
-input("There are also no saves since I don't know how to code that yet.")
-input("The game is case-sensitive, which mean that options should be written in lower or higher cases accordingly." + "\033[0m")
-
-
+input("WARNINGS !!!")
 print(" ")
+
+input("Please be aware that pressing the enter button without entering the recquired answers might result in a crash.")
+input("Entering letters instead of numbers may pose problems later, as you progress through the story.")
+input("The game is also case-sensitive, which mean that answers should be written in lower or higher cases accordingly." )
+input("Finally, there are no saves since I don't know how to code that yet." + "\033[0m")
+print(" ")
+
+
+input("This is an experimental project I made during my free time. Might finish it someday, might not... Who knows.")
+input("For now at least I do hope you'll enjoy the adventure.")
+print(" ")
+
+
 input("Before we start, let me ask you a few questions.")
 
 Player_name = input("\033[1;35m\n" + "What is your name ? ")
@@ -33,6 +39,19 @@ while Age_question != str("Y"):
             Player_age = input("\033[1;35m\n" + "Let me ask you this once again. How old is " + Player_name + " ? ")
             Age_question = input("\033[1;35m\n" + "Is " + Player_name + " " + Player_age + " years old ?" + "\033[1;36m\n" + "[Y]  " + "  [N] ")
 else:
-    input("\033[1;37m\n" + Player_name + " is " + Player_age + " years old.")
+    input("\033[1;37m\n" + Player_name + " is " + Player_age + " years old." + "\033[0m")
 
+print(" ")
+
+
+input(Player_name + ". You are about to start a brand new adventure.")
+input("Be honest with your answers, trust your instincts and have fun !")
+print(" ")
+
+
+input("\033[1;37m\n" + "Press enter to start.")
+
+
+input("\033[1;33m\n" + "\033[1m" + "A code from which you are the hero." + "\033[0m")
+print(" ")
 
