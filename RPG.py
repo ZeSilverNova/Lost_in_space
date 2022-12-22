@@ -50,12 +50,13 @@ input("\033[1;33m\n" + "\033[1m" + "Lost in space." + "\033[0m" )
 print(" ")
 
 
+def First_chapter ():
 
-input("You were heading to the moon when your compagny spaceship suddenly got raided by some pirates.")
-input("You knew the whole crew was condemned, and so you promptly left with the emergency shuttle unnoticed.")
-print(" ")
+    input("You were heading to the moon when your compagny spaceship suddenly got raided by some pirates.")
+    input("You knew the whole crew was condemned, and so you promptly left with the emergency shuttle unnoticed.")
+    print(" ")
 
-input("Minutes only after piloting the shuttle, you feel a tremendous impact.")
-input("You quickly glance back to where you came from.")
-input("Your eyes fill with dread as you see the mothership exploding into tiny pieces and the pirates following you.")
-print(" ")
+    input("Minutes only after piloting the shuttle, you feel a tremendous impact.")
+    input("You quickly glance back to where you came from.")
+    input("Your eyes fill with dread as you see the mothership exploding into tiny pieces and the pirates following you.")
+    print(" ")
