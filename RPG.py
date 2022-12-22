@@ -1,7 +1,7 @@
 input("\033[1;36m\n" + "Press the enter button to scroll the text.")
 print(" ")
 
-input("WARNINGS !!!")
+input("!!! WARNINGS !!!")
 print(" ")
 
 input("Please be aware that pressing the enter button without entering the recquired answers might result in a crash.")
@@ -44,14 +44,29 @@ else:
 print(" ")
 
 
-input(Player_name + ". You are about to start a brand new adventure.")
-input("Be honest with your answers, trust your instincts and have fun !")
+input(Player_name + ". Your adventure is about to start.")
+input("Trust your judgement, follow your instinct and have fun !")
 print(" ")
 
 
 input("\033[1;37m\n" + "Press enter to start.")
+print("\033[1;37m\n" + "Initializing story, please be patient.")
+import time
+my_list = ['.', '.', '.', '.', '.']
+for i in my_list:
+    time.sleep(1)
+    print(i)
 
 
-input("\033[1;33m\n" + "\033[1m" + "A code from which you are the hero." + "\033[0m")
+input("\033[1;33m\n" + "\033[1m" + "Lost in space." + "\033[0m" )
 print(" ")
 
+
+
+input("You were heading to the moon when your compagny spaceship suddenly got raided by some pirates.")
+input("You knew the whole crew was condemned, and so you promptly left with the emergency shuttle unnoticed.")
+print(" ")
+
+input("Minutes only after piloting the shuttle, you feel a tremendous impact.")
+input("You quickly glance back to where you came from and your eyes fill with dread as you see the mothership exploding and the pirates following you.")
+input(" ")
