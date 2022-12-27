@@ -411,4 +411,7 @@ First_chapter()
 
 def Second_chapter ():
     
+    print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
+    print(" ")
+
 Second_chapter()
