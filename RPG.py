@@ -4,11 +4,10 @@ print(" ")
 input("\033[1;36m\n" + "!!! WARNINGS !!!")
 print(" ")
 
-input("Please be aware that pressing the enter button without entering the recquired answers might result in a crash.")
-input("Entering letters instead of numbers may pose problems later, as you progress through the story.")
-input("The game is also case-sensitive, which mean that answers should be written in lower or higher cases accordingly.")
+input("Please be aware that pressing the enter button without entering the recquired choices might result in a crash.")
+input("The game is also case-sensitive, which mean that your inputs should be written in lower or higher cases accordingly.")
 input("Finally, keep in mind that there are no saves since I don't know how to code that yet.")
-input("You will however reach several checkpoints where your life will be restored." + "\033[0m")
+input("You will however reach several checkpoints during the game where your life will be restored." + "\033[0m")
 print(" ")
 
 
@@ -69,7 +68,7 @@ def First_chapter ():
 
     Restart_options = str("Y"), str("N")
     Moves = str("UPWARD") , str("DOWNWARD") , str("LEFTWARD") , str("RIGHTWARD" )
-    Shuttle_life_points = 10
+    Shuttle_life_points = 8
 
     print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
     print(" ")
@@ -197,4 +196,219 @@ def First_chapter ():
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
+
+    print("\033[1;32m\n" + "Your shuttle dives down, pushing you further away from the pirates." + "\033[0m")
+    print("You still have a long way to go.")
+    print(" ")
+
+    Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice not in Moves:
+        print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+        Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice != str("DOWNWARD"):
+        if Shuttle_life_points == 0:
+            input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
+            input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+            quit()
+
+        elif Shuttle_life_points == 1:
+            print("\033[1;31m\n" + "Another laser beam hits your shuttle, starting a fire.")
+            print("Focus " + Player_name + " !!! You mumble in fear." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points == 2:
+            print("\033[1;31m\n" + "You feel a tremendous impact in the cockpit.")
+            print("A strident alarm goes off." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
+            print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
+            print("You are starting to panick." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        else:
+            print("\033[1;31m\n" + "You feel laser blasts hitting your shuttle.")
+            print("The pirates are getting closer." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+
+    print("\033[1;32m\n" + "You continue to dive, dodging enemy fire." + "\033[0m")
+    print("You still have a long way to go, but you're doing good.")
+    print(" ")
+
+    Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice not in Moves:
+        print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+        Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice != str("LEFTWARD"):
+        if Shuttle_life_points == 0:
+            input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
+            input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+            quit()
+
+        elif Shuttle_life_points == 1:
+            print("\033[1;31m\n" + "Another laser beam hits your shuttle, starting a fire.")
+            print("Focus " + Player_name + " !!! You mumble in fear." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points == 2:
+            print("\033[1;31m\n" + "You feel a tremendous impact in the cockpit.")
+            print("A strident alarm goes off." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
+            print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
+            print("You are starting to panick." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        else:
+            print("\033[1;31m\n" + "You feel laser blasts hitting your shuttle.")
+            print("The pirates are getting closer." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+
+    print("\033[1;32m\n" + "You turn sharply left, after spotting an asteroid belt." + "\033[0m")
+    print("You start to wonder how much longer they will hunt you.")
+    print(" ")
+
+    Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice not in Moves:
+        print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+        Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice != str("RIGHTWARD"):
+        if Shuttle_life_points == 0:
+            input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
+            input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+            quit()
+
+        elif Shuttle_life_points == 1:
+            print("\033[1;31m\n" + "Another laser beam hits your shuttle, starting a fire.")
+            print("Focus " + Player_name + " !!! You mumble in fear." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points == 2:
+            print("\033[1;31m\n" + "You feel a tremendous impact in the cockpit.")
+            print("A strident alarm goes off." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
+            print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
+            print("You are starting to panick." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        else:
+            print("\033[1;31m\n" + "You feel laser blasts hitting your shuttle.")
+            print("The pirates are getting closer." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+
+    print("\033[1;32m\n" + "What looks like a nearby planet catches your eye as you sneak through the asteroid belt." + "\033[0m")
+    print("Maybe if you manage to land...")
+    print(" ")
+
+    Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice not in Moves:
+        print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+        Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice != str("LEFTWARD"):
+        if Shuttle_life_points == 0:
+            input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
+            input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+            quit()
+
+        elif Shuttle_life_points == 1:
+            print("\033[1;31m\n" + "Another laser beam hits your shuttle, starting a fire.")
+            print("Focus " + Player_name + " !!! You mumble in fear." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points == 2:
+            print("\033[1;31m\n" + "You feel a tremendous impact in the cockpit.")
+            print("A strident alarm goes off." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
+            print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
+            print("You are starting to panick." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        else:
+            print("\033[1;31m\n" + "You feel laser blasts hitting your shuttle.")
+            print("The pirates are getting closer." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+
+    print("\033[1;32m\n" + "You come out of the asteroid belt and head towards the ground." + "\033[0m")
+    print("Only one pirate ship remains behind you.")
+    print(" ")
+
+    Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice not in Moves:
+        print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+        Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+    while Move_choice != str("RIGHTWARD"):
+        if Shuttle_life_points == 0:
+            input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
+            input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+            quit()
+
+        elif Shuttle_life_points == 1:
+            print("\033[1;31m\n" + "Another laser beam hits your shuttle, starting a fire.")
+            print("Focus " + Player_name + " !!! You mumble in fear." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points == 2:
+            print("\033[1;31m\n" + "You feel a tremendous impact in the cockpit.")
+            print("A strident alarm goes off." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
+            print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
+            print("You are starting to panick." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+        else:
+            print("\033[1;31m\n" + "You feel laser blasts hitting your shuttle.")
+            print("The pirates are getting closer." + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+            Shuttle_life_points = Shuttle_life_points - 1
+
+
+    input("Sensing sudden danger, you sharply turn to the right.")
+    input("A massive salvo of laser fire passes in front of you, barely brushing your shuttle.")
+    print(" ")
+
 First_chapter()
+
+
+def Second_chapter ():
+    
+Second_chapter()
