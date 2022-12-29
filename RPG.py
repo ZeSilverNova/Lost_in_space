@@ -626,7 +626,8 @@ def Second_chapter ():
 
         directions = ["LEFTWARD", "RIGHTWARD"]
 
-        userInput = input("\033[1;35m\n" + "Two corridors now face you, where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
+        print("\033[1;35m\n" + "Two corridors now face you.")
+        userInput = input("Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
         print(" ")
 
         while userInput not in directions:
@@ -654,5 +655,5 @@ def Third_chapter ():
 
     print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
     print(" ")
-      
+
 Third_chapter()
