@@ -66,7 +66,6 @@ def First_chapter ():
     print(" ")
 
 
-    Restart_options = str("Y"), str("N")
     Moves = str("UPWARD") , str("DOWNWARD") , str("LEFTWARD") , str("RIGHTWARD" )
     Shuttle_life_points = 8
 
@@ -89,9 +88,9 @@ def First_chapter ():
             input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
             quit()
 
-        elif Shuttle_life_points <= 1:
+        elif Shuttle_life_points == 1:
             print("\033[1;31m\n" + "Another laser beam hits your shuttle, starting a fire.")
-            print("Focus " + Player_name + " !!! You mumble in fear." + "\033[0m")
+            print("'Focus " + Player_name + " !!!' You mumble in fear." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -402,16 +401,258 @@ def First_chapter ():
             Shuttle_life_points = Shuttle_life_points - 1
 
 
+    print(" ")
+    print(" ")
     input("Sensing sudden danger, you sharply turn to the right.")
     input("A massive salvo of laser fire passes in front of you, barely brushing your shuttle.")
     print(" ")
 
-First_chapter()
+First_chapter ()
 
 
 def Second_chapter ():
-    
+
+
     print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
     print(" ")
 
+    input("You somehow end up landing without exploding.")
+    input("A quick glance at your shuttle tells you not without surprise that it is now out of service.")
+    input("As you survey your surroundings with concern, you notice a huge magnetic storm approaching you.")
+    input("Not too far from where you are is what looks like an old military base.")
+    input("Not having much choice, you go to this structure.")
+    print(" ")
+
+    input("You have an uneasy feeling when you walk through the main entrance.")
+    input("It's almost as if something were watching you...")
+    print(" ")
+
+
+    def Vanilla_room_1 ():
+
+        directions = ["LEFTWARD", "BACKWARD"]
+
+        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / BACKWARD " + "\033[0m")
+        print(" ")
+
+        while userInput not in directions:
+            print("\033[1;37m\n" + "The options are LEFTWARD or RIGHTWARD" + "\033[0m")
+            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / BACKWARD " + "\033[0m")
+            print(" ")
+
+        if userInput == "LEFTWARD":
+            print("You take the corridor on your left.")
+            Crossroad ()
+
+        elif userInput == "BACKWARD":
+            print("You decide to turn around.")
+            Main_entrance ()
+
+        else:
+            print("Please enter a valid option.")
+
+
+    def Vanilla_room_2 ():
+
+        directions = ["FORWARD", "RIGHTWARD", "BACKWARD"]
+
+        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+        print(" ")
+
+        while userInput not in directions:
+            print("\033[1;37m\n" + "The options are FORWARD, RIGHTWARD or BACKWARD." + "\033[0m")
+            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+            print(" ")
+
+        if userInput == "FORWARD":
+            print("You keep moving forward.")
+
+            input("\033[1;31m\n" + "Something suddenly stabs you in the back as you try to leave the room, blasting a hole in your chest.")
+            print(" ")
+            input("'Wh.. at.. !?' You whisper in pain.")
+            print(" ")
+            input("Your brain can't even process what's happening to you.")
+            input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+            quit ()
+
+        elif userInput == "RIGHTWARD":
+            print("You head for the right.")
+            Vanilla_room_3 ()
+
+        elif userInput == "BACKWARD":
+            print("You decide to turn around.")
+            Main_entrance ()
+
+        else:
+            print("Please enter a valid option.")
+
+
+    def Vanilla_room_3 ():
+
+        directions = ["FORWARD", "LEFTWARD", "BACKWARD"]
+
+        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+        print(" ")
+
+        while userInput not in directions:
+            print("\033[1;37m\n" + "The options are FORWARD, LEFTWARD or BACKWARD." + "\033[0m")
+            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+            print(" ")
+
+        if userInput == "LEFTWARD":
+            print("You head for the left.")
+            print(" ")
+
+            input("You feel a huge wave of energy wash over you as you try to leave the room.")
+            input("The world slowly begins to fade as you lose consciousness.")
+            input("You find yourself at the front doors when you finally wake up.")
+            input("You can no longer exit the building this way since the storm is raging outside.")
+            print(" ")
+            input("'What was that ?' You ask yourself.")
+            Main_entrance ()
+
+        elif userInput == "FORWARD":
+            print("You keep moving forward.")
+            Vanilla_room_4 ()
+
+        elif userInput == "BACKWARD":
+            print("You decide to turn around.")
+            Vanilla_room_2 ()
+
+        else:
+            print("Please enter a valid option.")
+
+
+    def Vanilla_room_4 ():
+
+        directions = ["FORWARD", "LEFTWARD", "RIGHTWARD", "BACKWARD"]
+
+        print("\033[1;35m\n" + "You entered an empty room. There is a closed door on each wall.")
+        userInput = input("Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+        print(" ")
+
+        while userInput not in directions:
+            print("\033[1;37m\n" + "The options are FORWARD, LEFTWARD, RIGHTWARD or BACKWARD." + "\033[0m")
+            input("You entered an empty room.")
+            input("There is a sealed door on each wall.")
+            userInput = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+            print(" ")
+
+        if userInput == "LEFTWARD":
+            print("\033[1;32m\n" + "The stairs to the basement were just behind the door." + "\033[0m")
+            print(" ")
+
+            input("'Where are we going, " + Player_name + " ?' You wonder with doubt.")
+            input("Checking behind you one last time, you decide to go down the stairs..")
+            Third_chapter ()
+
+        elif userInput == "FORWARD":
+            print("You go to the door in front of you.")
+            print(" ")
+
+            input("You feel a huge wave of energy wash over you as you unlock the door.")
+            input("The world slowly begins to fade as you lose consciousness.")
+            input("You find yourself at the front doors when you finally wake up.")
+            input("You can no longer exit the building this way since the storm is raging outside.")
+            print(" ")
+            input("'What was that ?' You ask yourself.")
+            Main_entrance ()
+
+        elif userInput == "RIGHTWARD":
+            print("You go to the door on your right.")
+
+            input("\033[1;31m\n" + "Something suddenly stabs you in the back as you hit the door, blasting a hole in your chest.")
+            print(" ")
+            input("'Wh.. at.. !?' You whisper in pain.")
+            print(" ")
+            input("Your brain can't even process what's happening to you.")
+            input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+            quit ()
+
+        elif userInput == "BACKWARD":
+            print("You decide to turn around.")
+            Vanilla_room_3 ()
+
+        else:
+            print("Please enter a valid option.")
+
+
+    def Crossroad ():
+
+        directions = ["LEFTWARD", "RIGHTWARD", "BACKWARD"]
+
+        print("\033[1;35m\n" + "You have reached a crossroads, each path leading to a different closed door.")
+        userInput = input("Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
+        print(" ")
+
+        while userInput not in directions:
+            print("\033[1;37m\n" + "The options are LEFTWARD, RIGHTWARD or BACKWARD." + "\033[0m")
+            input("\033[1;35m\n" + "You have reached a crossroads, each path leading to a different closed door.")
+            userInput = input("Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
+            print(" ")
+
+        if userInput == "LEFTWARD":
+            print("You head for the left.")
+
+            input("\033[1;31m\n" + "Something suddenly stabs you in the back as you hit the door, blasting a hole in your chest.")
+            print(" ")
+            input("'Wh.. at.. !?' You whisper in pain.")
+            print(" ")
+            input("Your brain can't even process what's happening to you.")
+            input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+            quit ()
+
+        elif userInput == "RIGHTWARD":
+            print("You head for the right.")
+            print(" ")
+
+            input("You feel a huge wave of energy wash over you as you unlock the door.")
+            input("The world slowly begins to fade as you lose consciousness.")
+            input("You find yourself at the front doors when you finally wake up.")
+            input("You can no longer exit the building this way since the storm is raging outside.")
+            print(" ")
+            input("'What was that ?' You ask yourself.")
+            Main_entrance ()
+
+        elif userInput == "BACKWARD":
+            print("You decide to turn around.")
+            Vanilla_room_1 ()
+
+        else:
+            print("Please enter a valid option.")
+
+
+    def Main_entrance():
+
+        directions = ["LEFTWARD", "RIGHTWARD"]
+
+        userInput = input("\033[1;35m\n" + "Two corridors now face you, where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
+        print(" ")
+
+        while userInput not in directions:
+            print("\033[1;37m\n" + "The options are LEFTWARD or RIGHTWARD" + "\033[0m")
+            userInput = input("\033[1;35m\n" + "Two corridors now face you, where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
+            print(" ")
+
+        if userInput == "LEFTWARD":
+            print("You take the corridor on your left.")
+            Vanilla_room_2()
+
+        elif userInput == "RIGHTWARD":
+            print("You take the corridor on your right.")
+            Vanilla_room_1()
+
+        else:
+            print("Please enter a valid option.")
+
+    Main_entrance()
+
 Second_chapter()
+
+
+def Third_chapter ():
+
+    print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
+    print(" ")
+      
+Third_chapter()
