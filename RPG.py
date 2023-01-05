@@ -820,7 +820,7 @@ def Third_chapter ():
         input("You try to guess the combination.")
         print(" ")
 
-        Guess_number = 316
+        Guess_number = ("316")
         Guess_chances = 5
         Number_of_guesses = 0
 
