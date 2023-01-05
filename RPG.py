@@ -831,28 +831,25 @@ def Third_chapter ():
 
             Weapon_list = ["THE GUN", "THE GLOWING KATANA", "THE FLAMETHROWER"]
             Weapon_choice = input("\033[1;35m\n" + "Which one are you choosing ?" + "\033[1;36m\n" + "THE GUN / THE GLOWING KATANA / THE FLAMETHROWER " + "\033[0m")
-            print(" ")
 
             while Weapon_choice not in Weapon_list:
                 print("\033[1;37m\n" + "Choose one of the selectable weapons." + "\033[0m")
                 Weapon_choice = input("\033[1;35m\n" + "Which one are you choosing ?" + "\033[1;36m\n" + "THE GUN / THE GLOWING KATANA / THE FLAMETHROWER " + "\033[0m")
-                print(" ")
 
         Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
 
         while Number_of_guesses < Guess_chances and Player_guess != Guess_number:
             if Number_of_guesses < Guess_chances:
-                
                 if Player_guess != Guess_number:
                     print("\033[1;31m\n" + "You hear another violent slam at the door.")
                     print("They probably won't last much longer." + "\033[0m")
                     Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
                     Number_of_guesses = Number_of_guesses + 1
 
-                if Player_guess == Guess_number:
-                    input("\033[1;32m\n" + "Your eyes widen with relief as the padlock gives way under your fingers." + "\033[0m")
-                    print(" ")
-                    Weapon_choice_section()
+        if Player_guess == Guess_number:
+            input("\033[1;32m\n" + "Your eyes widen with relief as the padlock gives way under your fingers." + "\033[0m")
+            print(" ")
+            Weapon_choice_section()
 
     Sequence_2()
 
