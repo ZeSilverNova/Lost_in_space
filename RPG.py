@@ -839,18 +839,14 @@ def Third_chapter ():
                 print(" ")
 
         Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
-        print(" ")
 
         while Number_of_guesses < Guess_chances and Player_guess != Guess_number:
             if Number_of_guesses < Guess_chances:
+                
                 if Player_guess != Guess_number:
-                    print("You hear another violent slam at the door.")
-                    print("They probably won't last much longer.")
-                    print(" ")
-
+                    print("\033[1;31m\n" + "You hear another violent slam at the door.")
+                    print("They probably won't last much longer." + "\033[0m")
                     Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
-                    print(" ")
-
                     Number_of_guesses = Number_of_guesses + 1
 
                 if Player_guess == Guess_number:
