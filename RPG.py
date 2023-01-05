@@ -825,6 +825,11 @@ def Third_chapter ():
         Number_of_guesses = 0
 
         def Weapon_choice_section():
+            global Gun
+            global Katana
+            global Flamethrower
+            global Wooden_board
+
             input("You hasten to open the wardrobe.")
             input("Three different weapons were lying inside.")
             print(" ")
@@ -835,6 +840,25 @@ def Third_chapter ():
             while Weapon_choice not in Weapon_list:
                 print("\033[1;37m\n" + "Choose one of the selectable weapons." + "\033[0m")
                 Weapon_choice = input("\033[1;35m\n" + "Which one are you choosing ?" + "\033[1;36m\n" + "THE GUN / THE GLOWING KATANA / THE FLAMETHROWER " + "\033[0m")
+
+            if Weapon_choice == ("THE GUN") :
+                input("The doors give way abruptly under the repeated blows of the thing.")
+                input("You grab the gun and quickly reload it.")
+                input("However, you were only able to find 10 bullets in total.")
+                Gun = True
+
+            elif Weapon_choice == ("THE GLOWING KATANA") :
+                input("The doors give way abruptly under the repeated blows of the thing.")
+                input("Excruciating pain goes through you as soon as you take the katana out of its sheath.")
+                input("No longer having the luxury of thinking about it, you grit your teeth and prepare for battle.")
+                Katana = True
+
+            else :
+                input("The doors give way abruptly under the repeated blows of the thing.")
+                input("You proudly brandish the flamethrower towards the exit.")
+                input("The tank is however almost empty.")
+                Flamethrower = True
+
 
         Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
 
@@ -850,6 +874,14 @@ def Third_chapter ():
             input("\033[1;32m\n" + "Your eyes widen with relief as the padlock gives way under your fingers." + "\033[0m")
             print(" ")
             Weapon_choice_section()
+
+        if Gun == False :
+            if Flamethrower == False :
+                if Katana == False :
+                    input("The doors give way abruptly under the repeated blows of the thing.")
+                    input("Having found no weapons in the room, you pick up one of the many planks of wood that litter the floor.")
+                    Wooden_board = True
+
 
     Sequence_2()
 
