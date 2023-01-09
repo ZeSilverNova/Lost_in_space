@@ -69,7 +69,6 @@ def First_chapter ():
     input("Minutes only after piloting the shuttle, you feel a tremendous impact reverberating through the cabin.")
     input("You quickly glance back to where you came from.")
     input("Your eyes fill with dread as you see the mothership exploding into countless tiny pieces and the pirates heading your way.")
-    print(" ")
 
 
     Moves = str("UPWARD") , str("DOWNWARD") , str("LEFTWARD") , str("RIGHTWARD" )
@@ -80,7 +79,6 @@ def First_chapter ():
 
     input("The pirates are still pretty far, but they're getting closer.")
     input("You firmly grip the handlebars, hoping to distance them.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -121,7 +119,6 @@ def First_chapter ():
 
     print("\033[1;32m\n" + "Your shuttle rotates upward, narrowly avoiding enemy lasers." + "\033[0m")
     print("The pirates are still after you.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -163,7 +160,6 @@ def First_chapter ():
     print("\033[1;32m\n" + "Your shuttle rotates upward.")
     print("You have just dodged a salvo of missiles, which pulverizes a nearby asteroid." + "\033[0m")
     print("The pirates are still after you.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -204,7 +200,6 @@ def First_chapter ():
 
     print("\033[1;32m\n" + "Your shuttle dives down, pushing you further away from the pirates." + "\033[0m")
     print("You still have a long way to go.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -245,7 +240,6 @@ def First_chapter ():
 
     print("\033[1;32m\n" + "You continue to dive, dodging enemy fire." + "\033[0m")
     print("You still have a long way to go, but you're doing good.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -286,7 +280,6 @@ def First_chapter ():
 
     print("\033[1;32m\n" + "You turn sharply left, after spotting an asteroid belt." + "\033[0m")
     print("You start to wonder how much longer they will hunt you.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -327,7 +320,6 @@ def First_chapter ():
 
     print("\033[1;32m\n" + "What looks like a nearby planet catches your eye as you sneak through the asteroid belt." + "\033[0m")
     print("Maybe if you manage to land...")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -368,7 +360,6 @@ def First_chapter ():
 
     print("\033[1;32m\n" + "You come out of the asteroid belt and head towards the ground." + "\033[0m")
     print("Only one pirate ship remains behind you.")
-    print(" ")
 
     Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
@@ -408,10 +399,8 @@ def First_chapter ():
 
 
     print(" ")
-    print(" ")
     input("Sensing sudden danger, you sharply turn to the right.")
     input("A massive salvo of laser fire passes in front of you, barely brushing your shuttle.")
-    print(" ")
 
 First_chapter ()
 
@@ -431,7 +420,6 @@ def Second_chapter ():
 
     input("You have an uneasy feeling when you walk through the main entrance.")
     input("It's almost as if something was watching you...")
-    print(" ")
 
 
     def Vanilla_room_1 ():
@@ -680,7 +668,6 @@ def Third_chapter ():
 
         input("You hear a dull noise.")
         input("You don't even have to look back to realize that this thing is after you, and it doesn't wish you well.")
-        print(" ")
 
         print("\033[1;35m\n" +"Your instincts suddenly warn you of impending danger as you run away.")
         escape_direction = input("Where are you jumping ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
@@ -699,7 +686,6 @@ def Third_chapter ():
 
 
         print("You straighten up quickly and resume your escape.")
-        print(" ")
 
         print("\033[1;35m\n" + "Your instincts suddenly warn you of impending danger as you run away.")
         escape_direction = input("Where are you jumping ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
@@ -718,7 +704,6 @@ def Third_chapter ():
 
 
         print("You straighten up once more and resume your escape.")
-        print(" ")
 
         print("\033[1;35m\n" + "Your instincts suddenly warn you of impending danger as you run away.")
         escape_direction = input("Where are you jumping ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
@@ -737,7 +722,6 @@ def Third_chapter ():
 
 
         print("You see a locked door a few steps away.")
-        print(" ")
 
         print("\033[1;35m\n" + "Your instincts suddenly warn you of impending danger as you run away.")
         escape_direction = input("Where are you jumping ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
@@ -756,7 +740,6 @@ def Third_chapter ():
 
 
         print("You start to burn out when you almost get to the door.")
-        print(" ")
 
         print("\033[1;35m\n" + "Your instincts suddenly warn you of impending danger as you run away.")
         escape_direction = input("Where are you jumping ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
@@ -772,6 +755,7 @@ def Third_chapter ():
 
         elif escape_direction == "RIGHTWARD":
             print("\033[1;32m\n" + "You instantly jump to the right, perfectly dodging a sneak attack from the thing." + "\033[0m")
+            print(" ")
 
     Sequence_1 ()
 
@@ -798,7 +782,6 @@ def Third_chapter ():
         input("You frantically resume your search.")
         input("When all hope seemed lost, you suddenly discover a wardrobe locked with a digital padlock.")
         input("You try to guess the combination.")
-        print(" ")
 
         Guess_number = ("316")
         Guess_chances = 5
@@ -812,7 +795,6 @@ def Third_chapter ():
 
             input("You hasten to open the wardrobe.")
             input("Three different weapons were lying inside.")
-            print(" ")
 
             Weapon_list = ["THE GUN", "THE GLOWING KATANA", "THE FLAMETHROWER"]
             Weapon_choice = input("\033[1;35m\n" + "Which one are you choosing ?" + "\033[1;36m\n" + "THE GUN / THE GLOWING KATANA / THE FLAMETHROWER " + "\033[0m")
