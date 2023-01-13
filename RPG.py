@@ -4,7 +4,7 @@ print(" ")
 input("\033[1;36m\n" + "!!! WARNINGS !!!")
 print(" ")
 
-input("Please be aware that pressing the enter button without entering the recquired choices might result in a crash.")
+input("Please be aware that pressing the enter button without entering the required choices might result in a crash.")
 input("The game is also case-sensitive, which mean that your inputs should be written in lower or higher cases accordingly.")
 input("Finally, keep in mind that there are no saves since I don't know how to code that yet.")
 input("You will however reach several checkpoints during the game where your life will be restored." + "\033[0m")
@@ -14,18 +14,18 @@ input("This is an experimental project I made during my free time. Might finish 
 input("For now at least I hope you'll enjoy the adventure.")
 print(" ")
 
-input("Before we start, let's quickly make acquintance.")
+input("Before we start, let's quickly make acquaintance.")
 
 
 Player_name = input("\033[1;35m\n" + "What is your name ? ")
-Name_question = input("\033[1;35m\n" + "Is " + Player_name + " the name you choosed ?" + "\033[1;36m\n" + "[Y]  " + "  [N] ")
+Name_question = input("\033[1;35m\n" + "Is " + Player_name + " the name you chose ?" + "\033[1;36m\n" + "[Y]  " + "  [N] ")
 Name_answer = Name_question + str("Y")
 
 while Name_question != str("Y"):
     if Name_question != str("Y"):
         if Name_answer != str("Y"):
             Player_name = input("\033[1;35m\n" + "Let me ask you this once again. What is your name ? ")
-            Name_question = input("\033[1;35m\n" + "Is " + Player_name + " the name you choosed ?" + "\033[1;36m\n" + "[Y]  " + "  [N] ")
+            Name_question = input("\033[1;35m\n" + "Is " + Player_name + " the name you chose ?" + "\033[1;36m\n" + "[Y]  " + "  [N] ")
 else:
     input("\033[1;37m\n" + "You will be remembered as " + Player_name + "." + "\033[0m")
 
@@ -42,6 +42,7 @@ print(" ")
 
 
 Player_life_points = 19
+Player_max_health = 19
 Gun = False
 Katana = False
 Flamethrower = False
@@ -49,11 +50,11 @@ Wooden_board = False
 Bare_hands = False
 
 
-def First_chapter ():
+def First_chapter():
 
     print("Initializing story, please be patient.")
     import time
-    my_list = ["." , "   ." , "      ." , "         ." , "            ."]
+    my_list = [".", "   .", "      .", "         .", "            ."]
     for i in my_list:
         time.sleep(0.5)
         print(i)
@@ -62,7 +63,7 @@ def First_chapter ():
     input("\033[1;33m\n" + "\033[1m" + "Lost in space." + "\033[0m")
     print(" ")
 
-    input("You were heading to the moon when your compagny spaceship suddenly got raided by some pirates.")
+    input("You were heading to the moon when your company spaceship suddenly got raided by some pirates.")
     input("You knew the whole crew was condemned, and so you promptly left with the emergency shuttle unnoticed.")
     print(" ")
 
@@ -71,7 +72,7 @@ def First_chapter ():
     input("Your eyes fill with dread as you see the mothership exploding into countless tiny pieces and the pirates heading your way.")
 
 
-    Moves = str("UPWARD") , str("DOWNWARD") , str("LEFTWARD") , str("RIGHTWARD" )
+    Moves = ["UPWARD", "DOWNWARD", "LEFTWARD", "RIGHTWARD"]
     Shuttle_life_points = 7
 
     print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
@@ -106,7 +107,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -115,7 +116,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "Your shuttle rotates upward, narrowly avoiding enemy lasers." + "\033[0m")
     print("The pirates are still after you.")
@@ -146,7 +146,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -155,7 +155,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "Your shuttle rotates upward.")
     print("You have just dodged a salvo of missiles, which pulverizes a nearby asteroid." + "\033[0m")
@@ -187,7 +186,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -196,7 +195,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "Your shuttle dives down, pushing you further away from the pirates." + "\033[0m")
     print("You still have a long way to go.")
@@ -227,7 +225,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -236,7 +234,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "You continue to dive, dodging enemy fire." + "\033[0m")
     print("You still have a long way to go, but you're doing good.")
@@ -267,7 +264,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -276,7 +273,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "You turn sharply left, after spotting an asteroid belt." + "\033[0m")
     print("You start to wonder how much longer they will hunt you.")
@@ -307,7 +303,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -316,7 +312,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "What looks like a nearby planet catches your eye as you sneak through the asteroid belt." + "\033[0m")
     print("Maybe if you manage to land...")
@@ -347,7 +342,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -356,7 +351,6 @@ def First_chapter ():
             print("The pirates are getting closer." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
-
 
     print("\033[1;32m\n" + "You come out of the asteroid belt and head towards the ground." + "\033[0m")
     print("Only one pirate ship remains behind you.")
@@ -387,7 +381,7 @@ def First_chapter ():
 
         elif Shuttle_life_points <= 5 and Shuttle_life_points >= 3:
             print("\033[1;31m\n" + "A missile crash into your shuttle. The cabin is now heavily damaged.")
-            print("You are starting to panick." + "\033[0m")
+            print("You are starting to panic." + "\033[0m")
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
@@ -397,15 +391,15 @@ def First_chapter ():
             Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
             Shuttle_life_points = Shuttle_life_points - 1
 
-
     print(" ")
     input("Sensing sudden danger, you sharply turn to the right.")
     input("A massive salvo of laser fire passes in front of you, barely brushing your shuttle.")
 
-First_chapter ()
+
+First_chapter()
 
 
-def Second_chapter ():
+def Second_chapter():
 
 
     print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
@@ -436,23 +430,23 @@ def Second_chapter ():
 
         if userInput == "LEFTWARD":
             print("You take the corridor on your left.")
-            Crossroad ()
+            Crossroad()
 
         else:
             print("You decide to turn around.")
-            Main_entrance ()
+            Main_entrance()
 
 
-    def Vanilla_room_2 ():
+    def Vanilla_room_2():
 
         directions = ["FORWARD", "RIGHTWARD", "BACKWARD"]
 
-        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / RIGHTWARD / BACKWARD " + "\033[0m")
         print(" ")
 
         while userInput not in directions:
             print("\033[1;37m\n" + "The options are FORWARD, RIGHTWARD or BACKWARD." + "\033[0m")
-            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / RIGHTWARD / BACKWARD " + "\033[0m")
             print(" ")
 
         if userInput == "FORWARD":
@@ -468,23 +462,23 @@ def Second_chapter ():
 
         elif userInput == "RIGHTWARD":
             print("You head for the right.")
-            Vanilla_room_3 ()
+            Vanilla_room_3()
 
         else:
             print("You decide to turn around.")
-            Main_entrance ()
+            Main_entrance()
 
 
-    def Vanilla_room_3 ():
+    def Vanilla_room_3():
 
         directions = ["FORWARD", "LEFTWARD", "BACKWARD"]
 
-        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+        userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / BACKWARD " + "\033[0m")
         print(" ")
 
         while userInput not in directions:
             print("\033[1;37m\n" + "The options are FORWARD, LEFTWARD or BACKWARD." + "\033[0m")
-            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / BACKWARD " + "\033[0m")
             print(" ")
 
         if userInput == "LEFTWARD":
@@ -500,30 +494,30 @@ def Second_chapter ():
             print(" ")
 
             input("'What was that ?' You ask yourself.")
-            Main_entrance ()
+            Main_entrance()
 
         elif userInput == "FORWARD":
             print("You keep moving forward.")
-            Vanilla_room_4 ()
+            Vanilla_room_4()
 
         else:
             print("You decide to turn around.")
-            Vanilla_room_2 ()
+            Vanilla_room_2()
 
 
-    def Vanilla_room_4 ():
+    def Vanilla_room_4():
 
         directions = ["FORWARD", "LEFTWARD", "RIGHTWARD", "BACKWARD"]
 
         print("\033[1;35m\n" + "You entered an empty room. There is a closed door on each wall.")
-        userInput = input("Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+        userInput = input("Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
         print(" ")
 
         while userInput not in directions:
             print("\033[1;37m\n" + "The options are FORWARD, LEFTWARD, RIGHTWARD or BACKWARD." + "\033[0m")
             input("You entered an empty room.")
             input("There is a sealed door on each wall.")
-            userInput = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m" + "\033[0m")
+            userInput = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
             print(" ")
 
         if userInput == "LEFTWARD":
@@ -547,7 +541,7 @@ def Second_chapter ():
             print(" ")
 
             input("'What was that ?' You ask yourself.")
-            Main_entrance ()
+            Main_entrance()
 
         elif userInput == "RIGHTWARD":
             print("You go to the door on your right.")
@@ -558,14 +552,14 @@ def Second_chapter ():
             print(" ")
             input("Your brain can't even process what's happening to you.")
             input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
-            quit ()
+            quit()
 
         else:
             print("You decide to turn around.")
-            Vanilla_room_3 ()
+            Vanilla_room_3()
 
 
-    def Crossroad ():
+    def Crossroad():
 
         directions = ["LEFTWARD", "RIGHTWARD", "BACKWARD"]
 
@@ -588,7 +582,7 @@ def Second_chapter ():
             print(" ")
             input("Your brain can't even process what's happening to you.")
             input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
-            quit ()
+            quit()
 
         elif userInput == "RIGHTWARD":
             print("You head for the right.")
@@ -603,11 +597,11 @@ def Second_chapter ():
             print(" ")
 
             input("'What was that ?' You ask yourself.")
-            Main_entrance ()
+            Main_entrance()
 
         else:
             print("You decide to turn around.")
-            Vanilla_room_1 ()
+            Vanilla_room_1()
 
 
     def Main_entrance():
@@ -633,12 +627,13 @@ def Second_chapter ():
 
     Main_entrance()
 
+
 Second_chapter()
 
 
-def Third_chapter ():
+def Third_chapter():
 
-    def Sequence_1 ():
+    def Sequence_1():
 
         global Player_life_points
         escape_choices = ["LEFTWARD", "RIGHTWARD"]
@@ -669,7 +664,7 @@ def Third_chapter ():
         input("You hear a dull noise.")
         input("You don't even have to look back to realize that this thing is after you, and it doesn't wish you well.")
 
-        print("\033[1;35m\n" +"Your instincts suddenly warn you of impending danger as you run away.")
+        print("\033[1;35m\n" + "Your instincts suddenly warn you of impending danger as you run away.")
         escape_direction = input("Where are you jumping ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
 
         while escape_direction not in escape_choices:
@@ -750,17 +745,18 @@ def Third_chapter ():
 
         if escape_direction == "LEFTWARD":
             print("\033[1;31m\n" + "You instantly jump to the left, but are too slow to completely avoid the blow.")
-            print("A razor-sharp blade grazes your chest. Was it aiming for the heart ?" + "\033[0m")
+            print("A razor-sharp blade grazes your hips. You're starting to bleed." + "\033[0m")
+            print(" ")
             Player_life_points = Player_life_points - 1
 
         elif escape_direction == "RIGHTWARD":
             print("\033[1;32m\n" + "You instantly jump to the right, perfectly dodging a sneak attack from the thing." + "\033[0m")
             print(" ")
 
-    Sequence_1 ()
+    Sequence_1()
 
 
-    def Sequence_2 ():
+    def Sequence_2():
 
         input("Running towards the door, you rush to the other side before slamming it.")
         input("You grab one of the many wooden planks strewn on the ground in order to block it.")
@@ -783,7 +779,7 @@ def Third_chapter ():
         input("When all hope seemed lost, you suddenly discover a wardrobe locked with a digital padlock.")
         input("You try to guess the combination.")
 
-        Guess_number = ("316")
+        Guess_number = "316"
         Guess_chances = 5
         Number_of_guesses = 0
 
@@ -805,7 +801,7 @@ def Third_chapter ():
                 Weapon_choice = input("\033[1;35m\n" + "Which one are you choosing ?" + "\033[1;36m\n" + "THE GUN / THE GLOWING KATANA / THE FLAMETHROWER " + "\033[0m")
                 print(" ")
 
-            if Weapon_choice == ("THE GUN") :
+            if Weapon_choice == "THE GUN":
                 input("The doors abruptly give way under the repeated blows of the thing.")
                 input("You grab the gun and quickly reload it.")
                 input("You however were only able to find 10 bullets in total.")
@@ -813,7 +809,7 @@ def Third_chapter ():
 
                 Gun = True
 
-            elif Weapon_choice == ("THE GLOWING KATANA") :
+            elif Weapon_choice == "THE GLOWING KATANA":
                 input("The doors abruptly give way under the repeated blows of the thing.")
                 input("\033[1;31m\n" + "Excruciating pain goes through you as soon as you take the katana out of its sheath." + "\033[0m")
                 print(" ")
@@ -823,7 +819,7 @@ def Third_chapter ():
 
                 Katana = True
 
-            else :
+            else:
                 input("The doors abruptly give way under the repeated blows of the thing.")
                 input("You proudly brandish the flamethrower towards the creature.")
                 input("You however notice that the tank is almost empty.")
@@ -850,16 +846,117 @@ def Third_chapter ():
         if Gun == False :
             if Flamethrower == False :
                 if Katana == False :
-                    input("The doors give way abruptly under the repeated blows of the thing.")
+                    print(" ")
+                    input("The doors abruptly give way under the repeated blows of the thing.")
                     input("Having found no weapons in the room, you pick up one of the many planks of wood that litter the floor.")
+                    print(" ")
                     Wooden_board = True
 
     Sequence_2()
 
 
     def Sequence_3():
-            input("This is Sequence_3.")
+
+        def Fight_sequence():
+
+            global Player_life_points
+            global Gun
+            global Katana
+            global Flamethrower
+            global Wooden_board
+            global Bare_hands
+
+            input("While letting out a shrill cry, the creature rushes at you.")
+
+        def Third_choice():
+
+            Crucial_options = ["FIGHT", "WAIT"]
+
+            Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
+            print(" ")
+
+            while Crucial_choice not in Crucial_options:
+                print("\033[1;37m\n" + "The options are FIGHT or WAIT" + "\033[0m")
+
+                Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
+                print(" ")
+
+            if Crucial_choice == "FIGHT":
+                input("You angrily shout at the creature.")
+                Fight_sequence()
+
+            else:
+                input("A long silence ends up settling between you.")
+                input("You don't dare blink anymore and your saliva gets stuck in your throat.")
+                input("You almost lose track of time...")
+
+                input("\033[1;32m\n" + "Realizing you mean it no harm, the creature eventually slowly backtracks." + "\033[0m")
+
+        def Second_choice():
+
+            Crucial_options = ["FIGHT", "WAIT"]
+
+            Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
+            print(" ")
+
+            while Crucial_choice not in Crucial_options:
+                print("\033[1;37m\n" + "The options are FIGHT or WAIT" + "\033[0m")
+
+                Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
+                print(" ")
+
+            if Crucial_choice == "FIGHT":
+                input("You angrily shout at the creature.")
+                Fight_sequence()
+
+            else:
+                input("Growling menacingly, the creature now looks you straight in the eye.")
+                Third_choice()
+
+        def First_choice():
+
+            global Player_life_points
+            Crucial_options = ["FIGHT", "WAIT"]
+
+
+            input("Only now that you are facing the creature do you realize how in trouble you are.")
+            input("Pushing back the rubble of the door, it stares intently at you with his four burning eyes.")
+            input("Smoke comes out of his mouth and an acrid stench reaches your nostrils.")
+            input("You are disgusted when you notice a gaping wound in his chest.")
+
+            Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
+
+            while Crucial_choice not in Crucial_options:
+                print("\033[1;37m\n" + "The options are FIGHT or WAIT" + "\033[0m")
+
+                Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
+
+            if Crucial_choice == "FIGHT":
+                print(" ")
+                input("You angrily shout at the creature.")
+                Fight_sequence()
+
+            else:
+                input("\033[1;31m\n" + "The creature violently throws something in your direction, stabbing your right thigh." + "\033[0m")
+                print(" ")
+
+                input("Clenching your teeth in pain, you can only watch your blood slowly dripping onto the floor.")
+                input("You realize in horror that you have been struck by what looks like a sharp human bone.")
+                input("Perhaps it belonged to the former inhabitants of these places ?")
+
+                Player_life_points = Player_life_points - 5
+                Second_choice()
+
+        First_choice()
 
     Sequence_3()
 
+
 Third_chapter()
+
+
+def Fourth_chapter():
+
+    print(" ")
+
+Fourth_chapter()
