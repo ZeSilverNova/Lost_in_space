@@ -515,8 +515,9 @@ def Second_chapter():
 
         while userInput not in directions:
             print("\033[1;37m\n" + "The options are FORWARD, LEFTWARD, RIGHTWARD or BACKWARD." + "\033[0m")
-            input("You entered an empty room.")
-            input("There is a sealed door on each wall.")
+            print(" ")
+
+            print("\033[1;35m\n" + "You entered an empty room. There is a closed door on each wall.")
             userInput = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
             print(" ")
 
