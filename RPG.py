@@ -518,7 +518,7 @@ def Second_chapter():
             print(" ")
 
             print("\033[1;35m\n" + "You entered an empty room. There is a closed door on each wall.")
-            userInput = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
+            userInput = input("Where are you heading ?" + "\033[1;36m\n" + "FORWARD / LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
             print(" ")
 
         if userInput == "LEFTWARD":
@@ -958,6 +958,6 @@ Third_chapter()
 
 def Fourth_chapter():
 
-    print(" ")
+    print("To be continued...")
 
 Fourth_chapter()
