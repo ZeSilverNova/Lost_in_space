@@ -41,13 +41,18 @@ input("\033[1;37m\n" + "Press enter to start.")
 print(" ")
 
 
-Player_life_points = 19
 Player_max_health = 19
-Gun = False
-Katana = False
-Flamethrower = False
-Wooden_board = False
-Bare_hands = False
+Player_life_points = 19
+
+Monster_life_points = 24
+Monster_base_atk = 4
+Monster_passive_first_proc = Monster_base_atk + 2
+Monster_passive_second_proc = Monster_passive_first_proc + 2
+
+Perfectly_dodged_value = 0
+Missdodged_base_atk = 2
+Missdodged_first_proc = 3
+Missdodged_second_proc = 4
 
 
 def First_chapter():
@@ -784,7 +789,13 @@ def Third_chapter():
         Guess_chances = 5
         Number_of_guesses = 0
 
+        Gun = False
+        Katana = False
+        Flamethrower = False
+        Wooden_board = True
+
         def Weapon_choice_section():
+
             global Gun
             global Katana
             global Flamethrower
@@ -793,7 +804,7 @@ def Third_chapter():
             input("You hasten to open the wardrobe.")
             input("Three different weapons were lying inside.")
 
-            Weapon_list = ["THE GUN", "THE GLOWING KATANA", "THE FLAMETHROWER"]
+            Weapon_list = {"THE GUN": False, "THE GLOWING KATANA": False, "THE FLAMETHROWER": False, "Wooden Board": True}
             Weapon_choice = input("\033[1;35m\n" + "Which one are you choosing ?" + "\033[1;36m\n" + "THE GUN / THE GLOWING KATANA / THE FLAMETHROWER " + "\033[0m")
             print(" ")
 
@@ -809,6 +820,9 @@ def Third_chapter():
                 print(" ")
 
                 Gun = True
+                Katana = False
+                Flamethrower = False
+                Wooden_board = False
 
             elif Weapon_choice == "THE GLOWING KATANA":
                 input("The doors abruptly give way under the repeated blows of the thing.")
@@ -818,7 +832,10 @@ def Third_chapter():
                 input("No longer having the luxury of thinking about it, you grit your teeth and prepare for battle.")
                 print(" ")
 
+                Gun = False
                 Katana = True
+                Flamethrower = False
+                Wooden_board = False
 
             else:
                 input("The doors abruptly give way under the repeated blows of the thing.")
@@ -826,7 +843,10 @@ def Third_chapter():
                 input("You however notice that the tank is almost empty.")
                 print(" ")
 
+                Gun = False
+                Katana = False
                 Flamethrower = True
+                Wooden_board = False
 
 
         Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
@@ -844,14 +864,12 @@ def Third_chapter():
             print(" ")
             Weapon_choice_section()
 
-        if Gun == False :
-            if Flamethrower == False :
-                if Katana == False :
-                    print(" ")
-                    input("The doors abruptly give way under the repeated blows of the thing.")
-                    input("Having found no weapons in the room, you pick up one of the many planks of wood that litter the floor.")
-                    print(" ")
-                    Wooden_board = True
+        else:
+            print(" ")
+            input("The doors abruptly give way under the repeated blows of the thing.")
+            input("Having found no weapons in the room, you pick up one of the many planks of wood that litter the floor.")
+            print(" ")
+
 
     Sequence_2()
 
@@ -869,49 +887,60 @@ def Third_chapter():
 
             input("While letting out a shrill cry, the creature rushes at you.")
 
+
+
         def Third_choice():
 
             Crucial_options = ["FIGHT", "WAIT"]
 
             Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
-            print(" ")
 
             while Crucial_choice not in Crucial_options:
                 print("\033[1;37m\n" + "The options are FIGHT or WAIT" + "\033[0m")
 
                 Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
-                print(" ")
 
             if Crucial_choice == "FIGHT":
-                input("You angrily shout at the creature.")
+                print(" ")
+                input("Freeing yourself somehow from your uncomfortable position, you pick up your weapons and face the creature.")
                 Fight_sequence()
 
             else:
+                print(" ")
                 input("A long silence ends up settling between you.")
-                input("You don't dare blink anymore and your saliva gets stuck in your throat.")
-                input("You almost lose track of time...")
+                input("You don't dare blink anymore.")
+                input("The sounds of your heartbeat become deafening.")
+                input("You're almost losing track of time...")
 
                 input("\033[1;32m\n" + "Realizing you mean it no harm, the creature eventually slowly backtracks." + "\033[0m")
 
         def Second_choice():
 
+            global Player_life_points
             Crucial_options = ["FIGHT", "WAIT"]
 
             Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
-            print(" ")
 
             while Crucial_choice not in Crucial_options:
                 print("\033[1;37m\n" + "The options are FIGHT or WAIT" + "\033[0m")
 
                 Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
-                print(" ")
 
             if Crucial_choice == "FIGHT":
+                print(" ")
                 input("You angrily shout at the creature.")
                 Fight_sequence()
 
             else:
-                input("Growling menacingly, the creature now looks you straight in the eye.")
+                input("\033[1;31m\n" + "Suddenly jumping in your direction, the creature crashes hard into you, knocking you to the ground." + "\033[0m")
+                print(" ")
+
+                input("Slipping from your hands, your guns fall steps away from you.")
+                input("A dull ache makes you briefly close your eyes.")
+                input("The creature's face slowly approaches yours.")
+                input("You feel his gaze inspecting you intently.")
+
+                Player_life_points = Player_life_points - 5
                 Third_choice()
 
         def First_choice():
@@ -923,7 +952,7 @@ def Third_chapter():
             input("Only now that you are facing the creature do you realize how in trouble you are.")
             input("Pushing back the rubble of the door, it stares intently at you with his four burning eyes.")
             input("Smoke comes out of his mouth and an acrid stench reaches your nostrils.")
-            input("You are disgusted when you notice a gaping wound in his chest.")
+            input("A gaping wound in his chest catches your attention.")
 
             Crucial_choice = input("\033[1;35m\n" + "What are you going to do ? " + "\033[1;36m\n" + "FIGHT / WAIT " + "\033[0m")
 
@@ -958,6 +987,8 @@ Third_chapter()
 
 def Fourth_chapter():
 
-    print("To be continued...")
+    print(" ")
+    print(" ")
+    input("To be continued...")
 
 Fourth_chapter()
