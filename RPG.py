@@ -628,7 +628,6 @@ def Second_chapter():
         directions = ["LEFTWARD", "RIGHTWARD", "BACKWARD"]
 
         print("\033[1;35m\n" + "You have reached a crossroads, each path leading to a different closed door.")
-        print("On the wall")
         userInput = input("Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD / BACKWARD " + "\033[0m")
         print(" ")
 
@@ -934,95 +933,148 @@ def Third_chapter():
     def Sequence_3():
 
         def Fight_sequence():
+
+            global Player_life_points
+            global Curse
+
+            global Monster_life_points
+            global Monster_base_form
+            global Monster_first_form
+            global Monster_second_form
+
             global Gun
             global Katana
             global Flamethrower
             global Wooden_board
-            global Bare_hands
 
             input("While letting out a shrill cry, the creature rushes at you.")
             print(" ")
 
-            if Gun:
-                def Gun_5():
+            Player_options = ["FIGHT", "DODGE"]
+            Max_wooden_board_uses = 6
+            Wooden_board_count = 0
 
-                    global Player_life_points
-                    global Monster_life_points
-                    global Monster_second_form
+            Player_choice = input("\033[1;35m\n" + "You have to think fast ! " + "\033[1;36m\n" + "FIGHT / DODGE " + "\033[0m")
 
-                def Gun_4():
+            while Player_choice not in Player_options:
+                print("\033[1;37m\n" + "The options are FIGHT or DODGE" + "\033[0m")
 
-                    global Player_life_points
-                    global Monster_life_points
-                    global Monster_second_form
+                Player_choice = input("\033[1;35m\n" + "You have to think fast ! " + "\033[1;36m\n" + "FIGHT / DODGE " + "\033[0m")
 
-                Gun_5()
+            while Player_life_points > 0 and Monster_life_points > 0:
 
-                def Gun_3():
+                if Monster_life_points > 10:
 
-                    global Player_life_points
-                    global Monster_life_points
-                    global Monster_first_form
-                    global Monster_second_form
+                    if Gun:
+                        input("You deal X damage to monster.")
+                        input("Monster deal X damage to you.")
 
-                Gun_4()
+                    elif Katana:
+                        input("You deal X damage to monster.")
+                        input("You take X curse damage.")
+                        input("Monster deal X damage to you.")
 
-                def Gun_2():
+                    elif Flamethrower:
+                        input("You deal X damage to monster.")
+                        input("Monster take X burn damage.")
+                        input("Monster deal X damage to you.")
 
-                    global Player_life_points
-                    global Monster_life_points
-                    global Monster_base_form
-                    global Monster_first_form
+                    elif Wooden_board:
 
-                    Gun_3()
+                        if Wooden_board_count < Max_wooden_board_uses:
+                            input("You deal X damage to monster.")
+                            input("Monster deal X damage to you.")
+                            input("Your wooden board break, you pick up another one.")
 
-                def Gun_1():
+                            Wooden_board_count + 1
 
-                    global Player_life_points
-                    global Monster_life_points
-                    global Monster_base_form
+                        elif Wooden_board_count == Max_wooden_board_uses:
+                            input("You go bare hands.")
+                            input("You deal X damage to monster.")
+                            input("You take X backfire damage.")
+                            input("Monster deal X damage to you.")
 
-                    Gun_2()
+                elif Monster_life_points > 5 and Monster_life_points <= 10:
 
-                Gun_1()
+                    if Gun:
+                        input("You deal X damage to monster.")
+                        input("Monster deal X damage to you.")
 
-            elif Katana:
-                def Curse_removal():
+                    elif Katana:
+                        input("You deal X damage to monster.")
+                        input("You take X curse damage.")
+                        input("Monster deal X damage to you.")
 
+                    elif Flamethrower:
+                        input("You deal X damage to monster.")
+                        input("Monster take X burn damage.")
+                        input("Monster deal X damage to you.")
 
-                def Katana_3():
+                    elif Wooden_board:
 
-                    global Player_life_points
-                    global Curse
-                    global Monster_life_points
-                    global Monster_second_form
+                        if Wooden_board_count < Max_wooden_board_uses:
+                            input("You deal X damage to monster.")
+                            input("Monster deal X damage to you.")
+                            input("Your wooden board break, you pick up another one.")
 
-                    Curse_removal()
+                            Wooden_board_count + 1
 
-                def Katana_2():
+                        elif Wooden_board_count == Max_wooden_board_uses:
+                            input("You deal X damage to monster.")
+                            input("You take X backfire damage.")
+                            input("Monster deal X damage to you.")
 
-                    global Player_life_points
-                    global Curse
-                    global Monster_life_points
-                    global Monster_second_form
+                elif Monster_life_points <= 5:
 
-                    Katana_3()
+                    if Gun:
+                        input("Monster deal X damage to you.")
+                        input("You deal X damage to monster.")
 
-                def Katana_1():
+                    elif Katana:
+                        input("Monster deal X damage to you.")
+                        input("You deal X damage to monster.")
+                        input("You take X curse damage.")
 
-                    global Player_life_points
-                    global Curse
-                    global Monster_life_points
-                    global Monster_base_form
+                    elif Flamethrower:
+                        input("Monster deal X damage to you.")
+                        input("You deal X damage to monster.")
+                        input("Monster take X burn damage.")
 
-                    Katana_2()
+                    elif Wooden_board:
 
-                Katana_1()
+                        if Wooden_board_count < Max_wooden_board_uses:
+                            input("Monster deal X damage to you.")
+                            input("You deal X damage to monster.")
+                            input("Your wooden board break, you pick up another one.")
 
-            elif Flamethrower:
+                            Wooden_board_count + 1
 
-            elif Wooden_board:
+                        elif Wooden_board_count == Max_wooden_board_uses:
+                            input("Monster deal X damage to you.")
+                            input("You deal X damage to monster.")
+                            input("You take X backfire damage.")
 
+            if Player_life_points == 0:
+
+                input("\033[1;31m\n" + "Throwing your weapons away, the creature violently propels you against the ground.")
+                input("You hear a dull crack, immediately followed by immeasurable pain.")
+                input("The faces of your children suddenly come to mind as its jaws close in on your ribs.")
+                print(" ")
+
+                input("'Ci.. a.. h..'.")
+                print(" ")
+
+                input("A tear rolls down your cheek as even the pain fades.")
+                print(" ")
+
+                input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+                quit()
+
+            elif Monster_life_points == 0:
+
+                input("\033[1;32m\n" + "A deep relief grips you as the creature breathes its last." + "\033[0m")
+                print(" ")
+                
         def Third_choice():
 
             Crucial_options = ["FIGHT", "WAIT"]
