@@ -961,98 +961,130 @@ def Third_chapter():
 
                 Player_choice = input("\033[1;35m\n" + "You have to think fast ! " + "\033[1;36m\n" + "FIGHT / DODGE " + "\033[0m")
 
-            while Player_life_points > 0 and Monster_life_points > 0:
+            if Player_choice == ["FIGHT"]:
+                while Player_life_points > 0 and Monster_life_points > 0:
+                    if Monster_life_points > 10:
 
-                if Monster_life_points > 10:
-
-                    if Gun:
-                        input("You deal X damage to monster.")
-                        input("Monster deal X damage to you.")
-
-                    elif Katana:
-                        input("You deal X damage to monster.")
-                        input("You take X curse damage.")
-                        input("Monster deal X damage to you.")
-
-                    elif Flamethrower:
-                        input("You deal X damage to monster.")
-                        input("Monster take X burn damage.")
-                        input("Monster deal X damage to you.")
-
-                    elif Wooden_board:
-
-                        if Wooden_board_count < Max_wooden_board_uses:
+                        if Gun:
                             input("You deal X damage to monster.")
                             input("Monster deal X damage to you.")
-                            input("Your wooden board break, you pick up another one.")
 
-                            Wooden_board_count + 1
-
-                        elif Wooden_board_count == Max_wooden_board_uses:
-                            input("You go bare hands.")
+                        elif Katana:
                             input("You deal X damage to monster.")
-                            input("You take X backfire damage.")
+                            input("You take X curse damage.")
                             input("Monster deal X damage to you.")
 
-                elif Monster_life_points > 5 and Monster_life_points <= 10:
-
-                    if Gun:
-                        input("You deal X damage to monster.")
-                        input("Monster deal X damage to you.")
-
-                    elif Katana:
-                        input("You deal X damage to monster.")
-                        input("You take X curse damage.")
-                        input("Monster deal X damage to you.")
-
-                    elif Flamethrower:
-                        input("You deal X damage to monster.")
-                        input("Monster take X burn damage.")
-                        input("Monster deal X damage to you.")
-
-                    elif Wooden_board:
-
-                        if Wooden_board_count < Max_wooden_board_uses:
+                        elif Flamethrower:
                             input("You deal X damage to monster.")
-                            input("Monster deal X damage to you.")
-                            input("Your wooden board break, you pick up another one.")
-
-                            Wooden_board_count + 1
-
-                        elif Wooden_board_count == Max_wooden_board_uses:
-                            input("You deal X damage to monster.")
-                            input("You take X backfire damage.")
+                            input("Monster take X burn damage.")
                             input("Monster deal X damage to you.")
 
-                elif Monster_life_points <= 5:
+                        elif Wooden_board:
 
-                    if Gun:
-                        input("Monster deal X damage to you.")
-                        input("You deal X damage to monster.")
+                            if Wooden_board_count < Max_wooden_board_uses:
+                                input("You deal X damage to monster.")
+                                input("Monster deal X damage to you.")
+                                input("Your wooden board break, you pick up another one.")
 
-                    elif Katana:
-                        input("Monster deal X damage to you.")
-                        input("You deal X damage to monster.")
-                        input("You take X curse damage.")
+                                Wooden_board_count + 1
 
-                    elif Flamethrower:
-                        input("Monster deal X damage to you.")
-                        input("You deal X damage to monster.")
-                        input("Monster take X burn damage.")
+                            elif Wooden_board_count == Max_wooden_board_uses:
+                                input("You go bare hands.")
+                                input("You deal X damage to monster.")
+                                input("You take X backfire damage.")
+                                input("Monster deal X damage to you.")
 
-                    elif Wooden_board:
+                    elif Monster_life_points > 5 and Monster_life_points <= 10:
 
-                        if Wooden_board_count < Max_wooden_board_uses:
+                        if Gun:
+                            input("You deal X damage to monster.")
+                            input("Monster deal X damage to you.")
+
+                        elif Katana:
+                            input("You deal X damage to monster.")
+                            input("You take X curse damage.")
+                            input("Monster deal X damage to you.")
+
+                        elif Flamethrower:
+                            input("You deal X damage to monster.")
+                            input("Monster take X burn damage.")
+                            input("Monster deal X damage to you.")
+
+                        elif Wooden_board:
+
+                            if Wooden_board_count < Max_wooden_board_uses:
+                                input("You deal X damage to monster.")
+                                input("Monster deal X damage to you.")
+                                input("Your wooden board break, you pick up another one.")
+
+                                Wooden_board_count + 1
+
+                            elif Wooden_board_count == Max_wooden_board_uses:
+                                input("You deal X damage to monster.")
+                                input("You take X backfire damage.")
+                                input("Monster deal X damage to you.")
+
+                    elif Monster_life_points <= 5:
+
+                        if Gun:
                             input("Monster deal X damage to you.")
                             input("You deal X damage to monster.")
-                            input("Your wooden board break, you pick up another one.")
 
-                            Wooden_board_count + 1
-
-                        elif Wooden_board_count == Max_wooden_board_uses:
+                        elif Katana:
                             input("Monster deal X damage to you.")
                             input("You deal X damage to monster.")
-                            input("You take X backfire damage.")
+                            input("You take X curse damage.")
+
+                        elif Flamethrower:
+                            input("Monster deal X damage to you.")
+                            input("You deal X damage to monster.")
+                            input("Monster take X burn damage.")
+
+                        elif Wooden_board:
+
+                            if Wooden_board_count < Max_wooden_board_uses:
+                                input("Monster deal X damage to you.")
+                                input("You deal X damage to monster.")
+                                input("Your wooden board break, you pick up another one.")
+
+                                Wooden_board_count + 1
+
+                            elif Wooden_board_count == Max_wooden_board_uses:
+                                input("Monster deal X damage to you.")
+                                input("You deal X damage to monster.")
+                                input("You take X backfire damage.")
+
+            else:
+
+                Dodge_result = random.choice(["succeed", "fail"])
+                if Dodge_result == "succeed":
+                    return True
+                else:
+                    return False
+
+                while Player_life_points > 0 and Monster_life_points > 0:
+                    if Monster_life_points > 10:
+                        if Dodge_result:
+                            continue
+
+                        else:
+                            input("You took X damage.")
+
+                    elif Monster_life_points > 5 and Monster_life_points <= 10:
+
+                        if Dodge_result:
+                            continue
+
+                        else:
+                            input("You took X damage.")
+
+                    elif Monster_life_points <= 5:
+
+                        if Dodge_result:
+                            continue
+
+                        else:
+                            input("You took X damage.")
 
             if Player_life_points == 0:
 
