@@ -45,17 +45,13 @@ Shuttle_life_points = 7
 Player_max_health = 19
 Player_life_points = 19
 
-Gun = 1
-Gun is False
+Gun = False
 
-Katana = 2
-Katana is False
+Katana = False
 
-Flamethrower = 3
-Flamethrower is False
+Flamethrower = False
 
-Wooden_board = 4
-Wooden_board is True
+Wooden_board = True
 
 Monster_life_points = 19
 Monster_base_form = 2
@@ -99,10 +95,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("UPWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "UPWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -146,10 +143,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("UPWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "UPWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -194,10 +192,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("DOWNWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "DOWNWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -241,10 +240,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("DOWNWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "DOWNWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -288,10 +288,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("LEFTWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "LEFTWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -335,10 +336,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("RIGHTWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "RIGHTWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -382,10 +384,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("LEFTWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "LEFTWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -429,10 +432,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice != str("RIGHTWARD"):
-            while Move_choice not in Moves:
-                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+        while Move_choice not in Moves:
+            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+        while Move_choice != "RIGHTWARD":
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
@@ -881,10 +885,10 @@ def Third_chapter():
                 input("You however were only able to find 10 bullets in total.")
                 print(" ")
 
-                Gun is True
-                Katana is False
-                Flamethrower is False
-                Wooden_board is False
+                Gun = True
+                Katana = False
+                Flamethrower = False
+                Wooden_board = False
 
             elif Weapon_choice == "THE GLOWING KATANA":
                 input("The doors abruptly give way under the repeated blows of the thing.")
@@ -894,10 +898,10 @@ def Third_chapter():
                 input("No longer having the luxury of thinking about it, you grit your teeth and prepare for battle.")
                 print(" ")
 
-                Gun is False
-                Katana is True
-                Flamethrower is False
-                Wooden_board is False
+                Gun = False
+                Katana = True
+                Flamethrower = False
+                Wooden_board = False
 
             else:
                 input("The doors abruptly give way under the repeated blows of the thing.")
@@ -905,10 +909,10 @@ def Third_chapter():
                 input("You however notice that the tank is almost empty.")
                 print(" ")
 
-                Gun is False
-                Katana is False
-                Flamethrower is True
-                Wooden_board is False
+                Gun = False
+                Katana = False
+                Flamethrower = True
+                Wooden_board = False
 
 
         Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
