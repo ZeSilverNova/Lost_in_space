@@ -1,5 +1,3 @@
-import random
-
 input("\033[1;37m\n" + "Press the enter button to scroll the text." + "\033[0m")
 print(" ")
 
@@ -46,7 +44,18 @@ Shuttle_life_points = 7
 
 Player_max_health = 19
 Player_life_points = 19
-Curse = Player_life_points - 1
+
+Gun = 1
+Gun is False
+
+Katana = 2
+Katana is False
+
+Flamethrower = 3
+Flamethrower is False
+
+Wooden_board = 4
+Wooden_board is True
 
 Monster_life_points = 19
 Monster_base_form = 2
@@ -90,11 +99,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("UPWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -137,11 +146,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("UPWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -185,11 +194,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("DOWNWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -232,11 +241,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("DOWNWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -279,11 +288,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("LEFTWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -326,11 +335,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("RIGHTWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -373,11 +382,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("LEFTWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -420,11 +429,11 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != str("RIGHTWARD"):
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
@@ -847,11 +856,6 @@ def Third_chapter():
         Guess_chances = 5
         Number_of_guesses = 0
 
-        Gun = False
-        Katana = False
-        Flamethrower = False
-        Wooden_board = True
-
         def Weapon_choice_section():
 
             global Gun
@@ -877,10 +881,10 @@ def Third_chapter():
                 input("You however were only able to find 10 bullets in total.")
                 print(" ")
 
-                Gun = True
-                Katana = False
-                Flamethrower = False
-                Wooden_board = False
+                Gun is True
+                Katana is False
+                Flamethrower is False
+                Wooden_board is False
 
             elif Weapon_choice == "THE GLOWING KATANA":
                 input("The doors abruptly give way under the repeated blows of the thing.")
@@ -890,10 +894,10 @@ def Third_chapter():
                 input("No longer having the luxury of thinking about it, you grit your teeth and prepare for battle.")
                 print(" ")
 
-                Gun = False
-                Katana = True
-                Flamethrower = False
-                Wooden_board = False
+                Gun is False
+                Katana is True
+                Flamethrower is False
+                Wooden_board is False
 
             else:
                 input("The doors abruptly give way under the repeated blows of the thing.")
@@ -901,10 +905,10 @@ def Third_chapter():
                 input("You however notice that the tank is almost empty.")
                 print(" ")
 
-                Gun = False
-                Katana = False
-                Flamethrower = True
-                Wooden_board = False
+                Gun is False
+                Katana is False
+                Flamethrower is True
+                Wooden_board is False
 
 
         Player_guess = input("\033[1;35m\n" + "The padlock appears to have a three digit combination. " + "\033[0m")
@@ -934,8 +938,12 @@ def Third_chapter():
 
         def Fight_sequence():
 
+            import random
+
+            Gun_damage = random.randint(2, 3)
+            Hands_damage = random.randint(0, 1)
+
             global Player_life_points
-            global Curse
 
             global Monster_life_points
             global Monster_base_form
@@ -948,143 +956,239 @@ def Third_chapter():
             global Wooden_board
 
             input("While letting out a shrill cry, the creature rushes at you.")
-            print(" ")
 
             Player_options = ["FIGHT", "DODGE"]
             Max_wooden_board_uses = 6
             Wooden_board_count = 0
 
-            Player_choice = input("\033[1;35m\n" + "You have to think fast ! " + "\033[1;36m\n" + "FIGHT / DODGE " + "\033[0m")
-
-            while Player_choice not in Player_options:
-                print("\033[1;37m\n" + "The options are FIGHT or DODGE" + "\033[0m")
+            while Player_life_points > 0 and Monster_life_points > 0:
 
                 Player_choice = input("\033[1;35m\n" + "You have to think fast ! " + "\033[1;36m\n" + "FIGHT / DODGE " + "\033[0m")
 
-            if Player_choice == ["FIGHT"]:
-                while Player_life_points > 0 and Monster_life_points > 0:
+                while Player_choice not in Player_options:
+                    print("\033[1;37m\n" + "The options are FIGHT or DODGE" + "\033[0m")
+
+                    Player_choice = input("\033[1;35m\n" + "You have to think fast ! " + "\033[1;36m\n" + "FIGHT / DODGE " + "\033[0m")
+
+                if Player_choice == "FIGHT":
+
                     if Monster_life_points > 10:
-
-                        if Gun:
+                        if Gun is True:
                             input("You deal X damage to monster.")
+                            for i in range(2):
+                                Monster_life_points = Monster_life_points - Gun_damage
+
                             input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_base_form
 
-                        elif Katana:
+                        elif Katana is True:
                             input("You deal X damage to monster.")
+                            Monster_life_points = Monster_life_points - 8
+
                             input("You take X curse damage.")
-                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - 1
 
-                        elif Flamethrower:
+                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_base_form
+
+                        elif Flamethrower is True:
                             input("You deal X damage to monster.")
-                            input("Monster take X burn damage.")
-                            input("Monster deal X damage to you.")
+                            Monster_life_points = Monster_life_points - 4
 
-                        elif Wooden_board:
+                            input("Monster take X burn damage.")
+                            Monster_life_points = Monster_life_points - 2
+
+                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_base_form
+
+                        elif Wooden_board is True:
 
                             if Wooden_board_count < Max_wooden_board_uses:
                                 input("You deal X damage to monster.")
-                                input("Monster deal X damage to you.")
-                                input("Your wooden board break, you pick up another one.")
+                                Monster_life_points = Monster_life_points - 2
 
+                                input("Monster deal X damage to you.")
+                                Player_life_points = Player_life_points - Monster_base_form
+
+                                input("Your wooden board break, you pick up another one.")
                                 Wooden_board_count + 1
 
                             elif Wooden_board_count == Max_wooden_board_uses:
-                                input("You go bare hands.")
-                                input("You deal X damage to monster.")
-                                input("You take X backfire damage.")
-                                input("Monster deal X damage to you.")
+                                    if Hands_damage == 1:
+                                        input("You deal X damage to monster.")
+
+                                    else:
+                                        print(" ")
+                                    Monster_life_points = Monster_life_points - Hands_damage
+
+                                    input("You take X backfire damage.")
+                                    Player_life_points = Player_life_points - 2
+
+                                    input("Monster deal X damage to you.")
+                                    Player_life_points = Player_life_points - Monster_base_form
 
                     elif Monster_life_points > 5 and Monster_life_points <= 10:
 
-                        if Gun:
+                        if Gun is True:
                             input("You deal X damage to monster.")
-                            input("Monster deal X damage to you.")
+                            for i in range(2):
+                                Monster_life_points = Monster_life_points - Gun_damage
 
-                        elif Katana:
+                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_first_form
+
+                        elif Katana is True:
                             input("You deal X damage to monster.")
+                            Monster_life_points = Monster_life_points - 8
+
                             input("You take X curse damage.")
-                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - 1
 
-                        elif Flamethrower:
+                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_first_form
+
+                        elif Flamethrower is True:
                             input("You deal X damage to monster.")
-                            input("Monster take X burn damage.")
-                            input("Monster deal X damage to you.")
+                            Monster_life_points = Monster_life_points - 4
 
-                        elif Wooden_board:
+                            input("Monster take X burn damage.")
+                            Monster_life_points = Monster_life_points - 2
+
+                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_first_form
+
+                        elif Wooden_board is True:
 
                             if Wooden_board_count < Max_wooden_board_uses:
                                 input("You deal X damage to monster.")
-                                input("Monster deal X damage to you.")
-                                input("Your wooden board break, you pick up another one.")
+                                Monster_life_points = Monster_life_points - 2
 
-                                Wooden_board_count + 1
+                                input("Monster deal X damage to you.")
+                                Player_life_points = Player_life_points - Monster_first_form
+
+                                input("Your wooden board break, you pick up another one.")
+                                Wooden_board_count = Wooden_board_count + 1
 
                             elif Wooden_board_count == Max_wooden_board_uses:
-                                input("You deal X damage to monster.")
+                                if Hands_damage == 1:
+                                    input("You deal X damage to monster.")
+
+                                else:
+                                    print(" ")
+                                Monster_life_points = Monster_life_points - Hands_damage
+
                                 input("You take X backfire damage.")
+                                Player_life_points = Player_life_points - 2
+
                                 input("Monster deal X damage to you.")
+                                Player_life_points = Player_life_points - Monster_first_form
 
                     elif Monster_life_points <= 5:
 
-                        if Gun:
+                        if Gun is True:
                             input("Monster deal X damage to you.")
-                            input("You deal X damage to monster.")
+                            Player_life_points = Player_life_points - Monster_second_form
 
-                        elif Katana:
-                            input("Monster deal X damage to you.")
                             input("You deal X damage to monster.")
+                            for i in range(2):
+                                Monster_life_points = Monster_life_points - Gun_damage
+
+                        elif Katana is True:
+                            input("Monster deal X damage to you.")
+                            Player_life_points = Player_life_points - Monster_second_form
+
+                            input("You deal X damage to monster.")
+                            Monster_life_points = Monster_life_points - 8
+
                             input("You take X curse damage.")
+                            Player_life_points = Player_life_points - 1
 
-                        elif Flamethrower:
+                        elif Flamethrower is True:
                             input("Monster deal X damage to you.")
-                            input("You deal X damage to monster.")
-                            input("Monster take X burn damage.")
+                            Player_life_points = Player_life_points - Monster_second_form
 
-                        elif Wooden_board:
+                            input("You deal X damage to monster.")
+                            Monster_life_points = Monster_life_points - 4
+
+                            input("Monster take X burn damage.")
+                            Monster_life_points = Monster_life_points - 2
+
+                        elif Wooden_board is True:
 
                             if Wooden_board_count < Max_wooden_board_uses:
                                 input("Monster deal X damage to you.")
-                                input("You deal X damage to monster.")
-                                input("Your wooden board break, you pick up another one.")
+                                Player_life_points = Player_life_points - Monster_second_form
 
-                                Wooden_board_count + 1
+                                input("You deal X damage to monster.")
+                                Monster_life_points = Monster_life_points - 2
+
+                                input("Your wooden board break, you pick up another one.")
+                                Wooden_board_count = Wooden_board_count + 1
 
                             elif Wooden_board_count == Max_wooden_board_uses:
                                 input("Monster deal X damage to you.")
-                                input("You deal X damage to monster.")
+                                Player_life_points = Player_life_points - Monster_second_form
+
+                                if Hands_damage == 1:
+                                    input("You deal X damage to monster.")
+
+                                else:
+                                    print(" ")
+                                Monster_life_points = Monster_life_points - Hands_damage
+
                                 input("You take X backfire damage.")
+                                Player_life_points = Player_life_points - 2
 
-            else:
-
-                Dodge_result = random.choice(["succeed", "fail"])
-                if Dodge_result == "succeed":
-                    return True
                 else:
-                    return False
 
-                while Player_life_points > 0 and Monster_life_points > 0:
-                    if Monster_life_points > 10:
-                        if Dodge_result:
-                            continue
+                    Dodge = random.choice(["succeed", "fail"])
 
-                        else:
-                            input("You took X damage.")
+                    if Dodge == "succeed":
+                        return True
+                    else:
+                        return False
 
-                    elif Monster_life_points > 5 and Monster_life_points <= 10:
+                    while Player_life_points > 0 and Monster_life_points > 0:
 
-                        if Dodge_result:
-                            continue
+                        if Monster_life_points > 10:
+                            if Dodge:
+                                input("Following your instinct, you dive under a nearby piece of furniture.")
+                                input("A violent blow grazes your feet, marking an impact on the ground.")
+                                print(" ")
 
-                        else:
-                            input("You took X damage.")
+                                continue
 
-                    elif Monster_life_points <= 5:
+                            else:
+                                input("\033[1;31m\n" + "Your legs, paralyzed with fear, do not react quickly enough to completely avoid the blow." + "\033[0m")
 
-                        if Dodge_result:
-                            continue
+                                Player_life_points = Player_life_points - (Monster_base_form / 2)
 
-                        else:
-                            input("You took X damage.")
+                        elif Monster_life_points > 5 and Monster_life_points <= 10:
+
+                            if Dodge:
+                                input("Throwing numerous documents lying on the ground in the direction of the creature, you manage to move away slightly.")
+                                input("The creature slightly backs away.")
+                                print(" ")
+
+                                continue
+
+                            else:
+                                input("\033[1;31m\n" + "You tripped on a wooden board, and were unable to fully dodge the creature's tackle." + "\033[0m")
+
+                                Player_life_points = Player_life_points - (Monster_first_form / 2)
+
+                        elif Monster_life_points <= 5:
+
+                            if Dodge:
+                                input("Leaping sharply to the side, you narrowly avoid the creature's fangs.")
+                                print(" ")
+
+                                continue
+
+                            else:
+                                input("\033[1;31m\n" + "You are suddenly overwhelmed with pain from your wounds, leaving you unable to effectively dodge the attack." + "\033[0m")
+
+                                Player_life_points = Player_life_points - (Monster_second_form / 2)
 
             if Player_life_points == 0:
 
