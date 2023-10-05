@@ -1,4 +1,4 @@
-# Game_project
+# Lost in space
 
 Please be aware that pressing the enter button without entering the recquired choices might result in a crash. The game is also case-sensitive, which mean that your inputs should be written in lower or higher cases accordingly.
 
