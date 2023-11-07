@@ -1206,6 +1206,7 @@ def Third_chapter():
 
                 input("A tear rolls down your cheek as even the pain fades.")
                 print(" ")
+                print(" ")
 
                 input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
                 quit()
@@ -1213,6 +1214,7 @@ def Third_chapter():
             elif Monster_life_points == 0:
 
                 input("\033[1;32m\n" + "A deep relief grips you as the creature breathes its last." + "\033[0m")
+                print(" ")
                 print(" ")
                 
         def Third_choice():
@@ -1239,6 +1241,8 @@ def Third_chapter():
                 input("You're almost losing track of time...")
 
                 input("\033[1;32m\n" + "Realizing you mean it no harm, the creature eventually slowly backtracks." + "\033[0m")
+                print(" ")
+                print(" ")
 
         def Second_choice():
 
