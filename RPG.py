@@ -1413,8 +1413,11 @@ def Fourth_chapter():
 
     input("You are lost.")
     print(" ")
+    print(" ")
 
     input("You are lost in the vastness of the universe.")
+    print(" ")
+    print(" ")
     print(" ")
 
     input("You are lost in space.")
@@ -1423,7 +1426,6 @@ def Fourth_chapter():
     print(" ")
     print(" ")
 
-    input("To be continued...")
     quit()
 
 
