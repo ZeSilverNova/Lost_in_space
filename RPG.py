@@ -1382,6 +1382,23 @@ Third_chapter()
 
 def Fourth_chapter():
 
+    ascii_art = [
+        "\033[1;3;40;37m  ____  ____  __  __     __    ___  _  _  ____  \033[0m",
+        "\033[1;3;40;37m (  __)(  _ \\(  )(  )   /  \\  / __)/ )( \\(  __) \033[0m",
+        "\033[1;3;40;37m  ) _)  ) __/ )( / (_/\\(  O )( (_ \\) \\/ ( ) _)  \033[0m",
+        "\033[1;3;40;37m (____)(__)  (__)\\____/ \\__/  \\___/\\____/(____) \033[0m"
+    ]
+
+    def display_line_by_line(ascii_lines, delay=0.29):
+        for line in ascii_lines:
+            print(line)
+            time.sleep(delay)
+
+    display_line_by_line(ascii_art)
+
+    print(" ")
+    print(" ")
+
     input("Collapsing to the ground, you curl into yourself to calm your nerves.")
     input("Your wounds itch, but you have nothing at hand to heal them.")
     input("Stress and exhaustion suddenly overwhelm you.")
