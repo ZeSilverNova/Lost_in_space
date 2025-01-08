@@ -1,3 +1,21 @@
+import os
+import time
+import platform
+
+if platform.system() == "Windows":
+    os.system("")
+
+
+print(" ")
+
+print("\033[1;3;40;95m  __      ______  ______  ______     __  __   __       ______  ______  ______  ______  ______     \033[0m")
+print("\033[1;3;40;95m /\\ \\    /\\  __ \\/\\  ___\\/\\__  _\\   /\\ \\/\\ \"-.\\ \\     /\\  ___\\/\\  == \\/\\  __ \\/\\  ___\\/\\  ___\\    \033[0m")
+print("\033[1;3;40;95m \\ \\ \\___\\ \\ \\/\\ \\ \\___  \\/_/\\ \\/   \\ \\ \\ \\ \\-.  \\    \\ \\___  \\ \\  _-/\\ \\  __ \\ \\ \\___\\ \\  __\\    \033[0m")
+print("\033[1;3;40;95m  \\ \\_____\\ \\_____\\/\\_____\\ \\ \\_\\    \\ \\_\\ \\_\\\\\"\\_\\    \\/\\_____\\ \\_\\   \\ \\_\\ \\_\\ \\_____\\ \\_____\\  \033[0m")
+print("\033[1;3;40;95m   \\/_____/\\/_____/\\/_____/  \\/_/     \\/_/\\/_/ \\/_/     \\/_____/\\/_/    \\/_/\\/_/\\/_____/\\/_____/  \033[0m")
+
+print(" ")
+
 input("\033[1;37m\n" + "Press the enter button to scroll the text." + "\033[0m")
 print(" ")
 
@@ -10,11 +28,12 @@ input("Finally, keep in mind that there are no saves for added difficulty.")
 input("You will however reach several checkpoints during the game where your life will be restored." + "\033[0m")
 print(" ")
 
-input("This is an experimental project I made during my free time. Might finish it someday, might not... Who knows.")
-input("For now at least I hope you'll enjoy the adventure.")
+input("This is an experimental project I made during my free time.")
+input("For quite a while I thought I'd never finish it due to lack of motivation, but heh.. I guess we never really know, do we ?")
+input("But enough talking about me, that's not why you're here for !")
 print(" ")
 
-input("Before we start, let's quickly make acquaintance.")
+input("Now, before we start, let's quickly make acquaintance.")
 
 
 Player_name = input("\033[1;35m\n" + "What is your name ? ")
@@ -39,6 +58,7 @@ print(" ")
 
 input("\033[1;37m\n" + "Press enter to start.")
 print(" ")
+print(" ")
 
 Shuttle_life_points = 7
 
@@ -61,15 +81,20 @@ Monster_second_form = Monster_first_form + 2
 
 def First_chapter():
 
-    print("Initializing story, please be patient.")
-    import time
-    my_list = [".", "   .", "      .", "         .", "            ."]
-    for i in my_list:
-        time.sleep(0.5)
-        print(i)
-        print(" ")
+    ascii_art = [
+        "\033[1;3;40;37m   ___  _  _   __    _    ____  _  _  __ _    ____  __  ____    _  _  __   _  _  ____    __    __  ____  ____  \033[0m",
+        "\033[1;3;40;37m  / __)/ )( \\ /  \\  (_)  (  _ \\/ )( \\(  ( \\  (  __)/  \\(  _ \\  ( \\/ )/  \\ / )( \\(  _ \\  (  )  (  )(  __)(  __) \033[0m",
+        "\033[1;3;40;37m ( (__ ) __ ((_/ /   _    )   /) \\/ (/    /   ) _)(  O ))   /   )  /(  O )) \\/ ( )   /  / (_/\\ )(  ) _)  ) _)  \033[0m",
+        "\033[1;3;40;37m  \\___)\\_)(_/ (__)  (_)  (__\\_)\\____/\\_)__)  (__)  \\__/(__\\_)  (__/  \\__/ \\____/(__\\_)  \\____/(__)(__)  (____) \033[0m"
+    ]
 
-    input("\033[1;33m\n" + "\033[1m" + "Lost in space." + "\033[0m")
+    def display_line_by_line(ascii_lines, delay=0.29):
+        for line in ascii_lines:
+            print(line)
+            time.sleep(delay)
+
+    display_line_by_line(ascii_art)
+
     print(" ")
     print(" ")
 
@@ -471,6 +496,9 @@ def First_chapter():
         input("Sensing sudden danger, you sharply turn to the right.")
         input("A massive salvo of laser fire passes in front of you, barely brushing your shuttle.")
 
+        print(" ")
+        print(" ")
+
     Sequence_8()
 
 
@@ -478,6 +506,23 @@ First_chapter()
 
 
 def Second_chapter():
+
+    ascii_art = [
+        "\033[1;3;40;37m   ___  _  _  ____    _    __  __ _  ____  __     ____  _  _  ____    _  _   __   ____  ____  \033[0m",
+        "\033[1;3;40;37m  / __)/ )( \\(___ \\  (_)  (  )(  ( \\(_  _)/  \\   (_  _)/ )( \\(  __)  ( \\/ ) / _\\ (__  )(  __) \033[0m",
+        "\033[1;3;40;37m ( (__ ) __ ( / __/   _    )( /    /  )( (  O )    )(  ) __ ( ) _)   / \\/ \\/    \\ / _/  ) _)  \033[0m",
+        "\033[1;3;40;37m  \\___)\\_)(_/(____)  (_)  (__)\\_)__) (__) \\__/    (__) \\_)(_/(____)  \\_)(_/\\_/\\_/(____)(____) \033[0m"
+    ]
+
+    def display_line_by_line(ascii_lines, delay=0.29):
+        for line in ascii_lines:
+            print(line)
+            time.sleep(delay)
+
+    display_line_by_line(ascii_art)
+
+    print(" ")
+    print(" ")
 
     print("\033[1;37m\n" + "checkpoint reached" + "\033[0m")
     print(" ")
@@ -604,6 +649,9 @@ def Second_chapter():
             print(" ")
             input("Checking behind you one last time, you decide to go down the stairs.")
 
+            print(" ")
+            print(" ")
+
         elif userInput == "FORWARD":
             print("You go to the door in front of you.")
             print(" ")
@@ -710,6 +758,23 @@ Second_chapter()
 
 
 def Third_chapter():
+
+    ascii_art = [
+        "\033[1;3;40;37m   ___  _  _  ____    _    ____  ____   __   ____  __    _  _    ____  __ _   ___  __   _  _  __ _  ____  ____  ____  \033[0m",
+        "\033[1;3;40;37m  / __)/ )( \\( __ \\  (_)  (    \\(  __) / _\\ (    \\(  )  ( \\/ )  (  __)(  ( \\ / __)/  \\ / )( \\(  ( \\(_  _)(  __)(  _ \\ \033[0m",
+        "\033[1;3;40;37m ( (__ ) __ ( (__ (   _    ) D ( ) _) /    \\ ) D (/ (_/\\ )  /    ) _) /    /( (__(  O )) \\/ (/    /  )(   ) _)  )   / \033[0m",
+        "\033[1;3;40;37m  \\___)\\_)(_/(____/  (_)  (____/(____)\\_/\\_/(____/\\____/(__/    (____)\\_)__) \\___)\\__/ \\____/\\_)__) (__) (____)(__\\_) \033[0m"
+    ]
+
+    def display_line_by_line(ascii_lines, delay=0.29):
+        for line in ascii_lines:
+            print(line)
+            time.sleep(delay)
+
+    display_line_by_line(ascii_art)
+
+    print(" ")
+    print(" ")
 
     def Sequence_1():
 
