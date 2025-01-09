@@ -780,7 +780,7 @@ def Second_chapter():
 
         directions = ["LEFTWARD", "RIGHTWARD"]
 
-        print("\033[1;35m\n" + "You are at the main entrance.")
+        print("\033[1;35m\n" + "You are standing at the main entrance.")
         print("Two corridors now face you.")
         userInput = input("Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
         print(" ")
