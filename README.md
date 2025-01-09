@@ -6,6 +6,8 @@ Finally, keep in mind that there are no saves for added difficulty. You will how
 
 I tried to code a text base RPG on python during my free time. 
 
+The game is not fully developped yet as the fighting sequence isn't done yet, but everything is still fully playable.
+
 I would recommend you to run it by double click or through pycharm for a better game experience. 
 Maybe, someday, I'll work on a full 2D, 2.5D or 3D game as a solo dev, but it'll have to wait a bit.
 
