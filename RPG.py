@@ -1098,17 +1098,17 @@ def Third_chapter():
                             Player_life_points = Player_life_points - Monster_base_form
 
                         elif Katana is True:
-                            input("You deal X damage to monster.")
+                            input("You deal 8 damage to the creature.")
                             Monster_life_points = Monster_life_points - 8
 
-                            input("You take X curse damage.")
+                            input("You feel like your sanity is being consumed by the blade.")
                             Player_life_points = Player_life_points - 1
 
                             input("Monster deal X damage to you.")
                             Player_life_points = Player_life_points - Monster_base_form
 
                         elif Flamethrower is True:
-                            input("You deal X damage to monster.")
+                            input("You deal 4 damage to the creature.")
                             Monster_life_points = Monster_life_points - 4
 
                             input("Monster take X burn damage.")
@@ -1154,17 +1154,17 @@ def Third_chapter():
                             Player_life_points = Player_life_points - Monster_first_form
 
                         elif Katana is True:
-                            input("You deal X damage to monster.")
+                            input("You deal 8 damage to monster.")
                             Monster_life_points = Monster_life_points - 8
 
-                            input("You take X curse damage.")
+                            input("You take 1 curse damage.")
                             Player_life_points = Player_life_points - 1
 
                             input("Monster deal X damage to you.")
                             Player_life_points = Player_life_points - Monster_first_form
 
                         elif Flamethrower is True:
-                            input("You deal X damage to monster.")
+                            input("You deal 4 damage to the creature.")
                             Monster_life_points = Monster_life_points - 4
 
                             input("Monster take X burn damage.")
@@ -1213,20 +1213,20 @@ def Third_chapter():
                             input("Monster deal X damage to you.")
                             Player_life_points = Player_life_points - Monster_second_form
 
-                            input("You deal X damage to monster.")
+                            input("You deal 8 damage to monster.")
                             Monster_life_points = Monster_life_points - 8
 
-                            input("You take X curse damage.")
+                            input("You take 1 curse damage.")
                             Player_life_points = Player_life_points - 1
 
                         elif Flamethrower is True:
                             input("Monster deal X damage to you.")
                             Player_life_points = Player_life_points - Monster_second_form
 
-                            input("You deal X damage to monster.")
+                            input("You deal 4 damage to the creature.")
                             Monster_life_points = Monster_life_points - 4
 
-                            input("Monster take X burn damage.")
+                            input("You can see the flesh of the creature starting to melt away. ")
                             Monster_life_points = Monster_life_points - 2
 
                         elif Wooden_board is True:
@@ -1261,8 +1261,10 @@ def Third_chapter():
 
                     if Dodge == "succeed":
                         return True
+                        continue
                     else:
                         return False
+                        continue
 
                     while Player_life_points > 0 and Monster_life_points > 0:
 
@@ -1282,8 +1284,8 @@ def Third_chapter():
                         elif Monster_life_points > 5 and Monster_life_points <= 10:
 
                             if Dodge:
-                                input("Throwing numerous documents lying on the ground in the direction of the creature, you manage to move away slightly.")
-                                input("The creature slightly backs away.")
+                                input("Throwing numerous documents lying on the ground in the direction of the creature, you manage to slightly move away.")
+                                input("The creature backs away from you.")
                                 print(" ")
 
                                 continue
@@ -1316,7 +1318,7 @@ def Third_chapter():
                 input("'Se.. l.. e..'.")
                 print(" ")
 
-                input("A tear rolls down your cheek as even the pain fades.")
+                input("A tear rolls down your cheek as even the pain begins to fade.")
                 print(" ")
                 print(" ")
 
