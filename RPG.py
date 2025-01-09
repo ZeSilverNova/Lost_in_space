@@ -120,15 +120,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "UPWARD":
 
-            if Shuttle_life_points == 0:
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "UPWARD":
+                break
+
+            elif Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -168,15 +173,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "UPWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "UPWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -217,15 +227,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "DOWNWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "DOWNWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -265,15 +280,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "DOWNWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "DOWNWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -313,15 +333,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "LEFTWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "LEFTWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -361,15 +386,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "RIGHTWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "RIGHTWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -409,15 +439,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "LEFTWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "LEFTWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -457,15 +492,20 @@ def First_chapter():
 
         Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
 
-        while Move_choice not in Moves:
-            print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
-            Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
-
         while Move_choice != "RIGHTWARD":
+
+            while Move_choice not in Moves:
+                print("\033[1;37m\n" + "The options are UPWARD, DOWNWARD, LEFTWARD and RIGHTWARD" + "\033[0m")
+                Move_choice = input("\033[1;35m\n" + "Where are you heading ?" + "\033[1;36m\n" + "UPWARD / DOWNWARD / LEFTWARD / RIGHTWARD " + "\033[0m")
+
+            if Move_choice == "RIGHTWARD":
+                break
 
             if Shuttle_life_points == 0:
                 input("\033[1;31m\n" + "A violent explosion suddenly overwhelms you.")
                 input("You slowly lose consciousness as your shuttle shatters into pieces." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Shuttle_life_points == 1:
@@ -546,7 +586,7 @@ def Second_chapter():
 
         while userInput not in directions:
             print("\033[1;37m\n" + "The options are LEFTWARD or RIGHTWARD" + "\033[0m")
-            userInput = input("\033[1;35m\n" + "You entered an empty room, where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / BACKWARD " + "\033[0m")
+            userInput = input("\033[1;35m\n" + "You entered a small dusty room. Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / BACKWARD " + "\033[0m")
             print(" ")
 
         if userInput == "LEFTWARD":
@@ -580,6 +620,8 @@ def Second_chapter():
 
             input("Your brain can't even process what's happening to you.")
             input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+
+            input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
             quit()
 
         elif userInput == "RIGHTWARD":
@@ -678,6 +720,8 @@ def Second_chapter():
 
             input("Your brain can't even process what's happening to you.")
             input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+
+            input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
             quit()
 
         else:
@@ -709,6 +753,8 @@ def Second_chapter():
 
             input("Your brain can't even process what's happening to you.")
             input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+
+            input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
             quit()
 
         elif userInput == "RIGHTWARD":
@@ -1263,10 +1309,10 @@ def Third_chapter():
 
                 input("\033[1;31m\n" + "Throwing your weapons away, the creature violently propels you against the ground.")
                 input("You hear a dull crack, immediately followed by immeasurable pain.")
-                input("The faces of your children suddenly come to mind as its jaws close in on your ribs.")
+                input("The face of your loved one suddenly come to mind as its jaws close in on your ribs.")
                 print(" ")
 
-                input("'Ci.. a.. h..'.")
+                input("'Se.. l.. e..'.")
                 print(" ")
 
                 input("A tear rolls down your cheek as even the pain fades.")
@@ -1274,6 +1320,8 @@ def Third_chapter():
                 print(" ")
 
                 input("Here sadly ends the story of " + Player_name + "." + "\033[0m")
+
+                input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
                 quit()
 
             elif Monster_life_points == 0:
@@ -1405,6 +1453,10 @@ def Fourth_chapter():
     input("Your eyes slowly close.")
     print(" ")
 
+    input("You vividly remember the laugh of your loved one")
+    print(" ")
+    print(" ")
+
     input("'And now " + Player_name + ",' you whisper softly, 'what do we do ?'")
     print(" ")
 
@@ -1426,6 +1478,7 @@ def Fourth_chapter():
     print(" ")
     print(" ")
 
+    input("\033[1;37m\n" + "Press enter to exit." + "\033[0m")
     quit()
 
 
