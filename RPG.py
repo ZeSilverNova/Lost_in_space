@@ -780,7 +780,8 @@ def Second_chapter():
 
         directions = ["LEFTWARD", "RIGHTWARD"]
 
-        print("\033[1;35m\n" + "Two corridors now face you.")
+        print("\033[1;35m\n" + "You are at the main entrance.")
+        print("Two corridors now face you.")
         userInput = input("Where are you heading ?" + "\033[1;36m\n" + "LEFTWARD / RIGHTWARD " + "\033[0m")
         print(" ")
 
@@ -1451,10 +1452,6 @@ def Fourth_chapter():
     input("Your wounds itch, but you have nothing at hand to heal them.")
     input("Stress and exhaustion suddenly overwhelm you.")
     input("Your eyes slowly close.")
-    print(" ")
-
-    input("You vividly remember the laugh of your loved one")
-    print(" ")
     print(" ")
 
     input("'And now " + Player_name + ",' you whisper softly, 'what do we do ?'")
